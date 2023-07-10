@@ -20,7 +20,6 @@
           src = gamecontroller;
           buildInputs = with pkgs; [ ant jdk makeWrapper ];
           buildPhase = ''
-            ln -s $(which java) $out/java
             ant
             mv ./bin $out
           '';
