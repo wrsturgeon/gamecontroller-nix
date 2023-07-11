@@ -1,5 +1,5 @@
 {
-  description = "RoboCup SPL Legacy GameController (2022 & earlier)";
+  description = "RoboCup SPL GameController";
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     gamecontroller = { url = "github:robocup-spl/gamecontroller"; flake = false; };
@@ -9,6 +9,7 @@
     let
       supportedSystems = [
         "x86_64-linux"
+        "x86_64-darwin"
       ];
     in flake-utils.lib.eachSystem supportedSystems (system:
       let
